@@ -7,8 +7,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import module.ContaBancaria;
+import module.ContaCorrente;
+import module.ContaPoupança;
 
 public class ControllerSaque{
+
+
+
+
 
     @FXML
     private Button ButtonConfirmarSaque;
@@ -19,7 +26,11 @@ public class ControllerSaque{
     @FXML
     private Button ButtonVoltarSaque;
 
+
+
+
     public void voltarSaque(javafx.event.ActionEvent actionEvent) throws Exception{
+
         Stage stage1 = (Stage) ButtonVoltarSaque.getScene().getWindow();
         stage1.close();
 
@@ -31,6 +42,14 @@ public class ControllerSaque{
     }
 
     public void confirmarSaque(javafx.event.ActionEvent actionEvent) throws  Exception{
+        ContaBancaria cb = new ContaCorrente(100.0);
+
+        if(cb.getValorEmConta()-Double.parseDouble(TextFieldSaque.getText()) > 0.0) {
+            cb.setValorEmConta(cb.getValorEmConta() - Double.parseDouble(TextFieldSaque.getText()));
+        }else{
+            System.out.println("Você não tem essa quantia para saque!");
+        }
+
         Stage stage1 = (Stage) ButtonConfirmarSaque.getScene().getWindow();
         stage1.close();
 

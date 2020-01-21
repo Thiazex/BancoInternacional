@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import module.ContaBancaria;
+import module.ContaCorrente;
 
 public class ControllerDepositar {
 
@@ -21,6 +23,10 @@ public class ControllerDepositar {
 
 
     public void confirmarDeposito(javafx.event.ActionEvent actionEvent) throws  Exception{
+        ContaBancaria cb = new ContaCorrente(100.00);
+        cb.setValorEmConta(cb.getValorEmConta()+Double.parseDouble(TextFieldDeposito.getText()));
+        System.out.println("Deposito realizado com sucesso!!");
+
         Stage stage1 = (Stage) ButtonConfirmarDeposito.getScene().getWindow();
         stage1.close();
 

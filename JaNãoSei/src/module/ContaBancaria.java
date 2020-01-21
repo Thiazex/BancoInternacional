@@ -5,7 +5,11 @@ public abstract class ContaBancaria {
     private Double valorEmConta;
 
     public ContaBancaria(Double valorEmConta){
-        this.valorEmConta = 0.0;
+        this.valorEmConta = valorEmConta;
+    }
+
+    public ContaBancaria(){
+
     }
 
 
@@ -17,7 +21,6 @@ public abstract class ContaBancaria {
     public void setValorEmConta(Double valorEmConta) {
         this.valorEmConta = valorEmConta;
     }
-
 
 
 }
