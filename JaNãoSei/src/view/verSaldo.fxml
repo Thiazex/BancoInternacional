@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerVerSaldo">
+   <children>
+      <Button fx:id="ButtonVoltar" layoutX="202.0" layoutY="184.0" mnemonicParsing="false" onAction="#voltarSaldo" prefHeight="25.0" prefWidth="85.0" text="Voltar" />
+      <Label layoutX="132.0" layoutY="139.0" text="Seu saldo é:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="14.0" prefHeight="55.0" prefWidth="198.0" text="VER SALDO">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Text fx:id="TextSaldo" fill="#ff0606" layoutX="215.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="59.13671875">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
